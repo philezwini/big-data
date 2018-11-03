@@ -2,6 +2,7 @@ import loader as ld
 import trainer as tr
 import tensorflow as tf
 import cv2 as cv
+import matplotlib.pyplot as plt
     
 test_set = ld.load_images_from_file("..\\datasets\\age-detection\\test")
 
@@ -28,3 +29,8 @@ def evaluate(index, model):
     answer = test_set[1][index]
     
     return prediction, answer
+
+def display_image(index):
+    img = test_set[0][index]
+    plt.imshow(img, cmap = "gray")
+    plt.show()
