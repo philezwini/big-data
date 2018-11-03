@@ -53,16 +53,6 @@ def load_images_from_file(path):
     
     return return_set
 
-# The following function loads an image from the file system and
-# returns it as a numpy array with shape = (1, 200, 200, 3). Conv2D takes a 4-d input.
-def load_test_img(path):
-    img = cv2.imread(path, 0)
-    ret_img = []
-    ret_img.append(img)
-    ret_img = numpy.array(ret_img)
-    ret_img.reshape(1, 200, 200, 1)
-    return ret_img
-
 def load_saved_model(path):
     return tf.keras.models.load_model(path)
     

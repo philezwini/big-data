@@ -1,12 +1,7 @@
-import loader
 import tensorflow as tf
 from keras.utils import np_utils
 
-def train_model():
-    # Obtain the train and valiation sets using the "loader" module.
-    training_set = loader.load_images_from_file("..\\datasets\\age-detection\\train")
-    validation_set = loader.load_images_from_file("..\\datasets\\age-detection\\validation")
-    
+def train_model(training_set, validation_set):
     train_x = training_set[0].reshape(training_set[0].shape[0], 200, 200, 1)
     val_x = validation_set[0].reshape(validation_set[0].shape[0], 200, 200, 1)
     
