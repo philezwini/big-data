@@ -1,0 +1,12 @@
+.idea/
+__pycache__/
+venv/
+datasets/
+.vs/
+/bin/
+.settings/
+/haar-cascades/
+/models/
+.classpath
+.project
+build.fxbuild
