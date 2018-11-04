@@ -25,7 +25,6 @@ def load_existing_model():
 
 def evaluate(index, model):
     img = test_set[0][index].reshape(1, test_set[0][index].shape[0], test_set[0][index].shape[1], 1)
-    print(img.shape)
     prediction = model.predict(img)
     answer = test_set[1][index]
     
@@ -42,7 +41,7 @@ def evaluate_real_time(img, model):
     img = img.reshape(1, img.shape[0], img.shape[1], 1)
     prediction = model.predict(img)
 
-    print(prediction)
+    return prediction
 
 def display_image(index):
     img = test_set[0][index]
